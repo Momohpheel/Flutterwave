@@ -5,11 +5,6 @@ $ch = curl_init($url);
 
 curl_setopt_array($ch, array(
     CURLOPT_RETURNTRANSFER => true,
-    CURLOPT_HTTPHEADER => array(
-        'Accept: application/json',
-        'Content-Type : application/json',
-        'Authorization : Bearer FLWSECK_TEST-cf744a18ea5f5c0faabb5ad92eca6217-X',
-    ),
     CURLOPT_CUSTOMREQUEST => "POST",
     CURLOPT_POSTFIELDS => json_encode([
         'tx_ref' => 'qwerty-12345',
@@ -29,6 +24,10 @@ curl_setopt_array($ch, array(
                 
      ]
     ]),
+    CURLOPT_HTTPHEADER => array(
+        'Content-Type : application/json',
+        'Authorization : Bearer FLWSECK_TEST-cf744a18ea5f5c0faabb5ad92eca6217-X',
+    ),
 ));
 
 
