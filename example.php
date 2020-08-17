@@ -2,6 +2,10 @@
 
 $url = 'https://api.flutterwave.com/v3/accounts/resolve';
 $ch = curl_init($url);
+$data = [
+    'account_number' => '0787860837',
+    'account_bank' => '044'
+];
 
 curl_setopt_array($ch, array(
     //CURLOPT_URL => 'http://localhost/Flutterwave%20Intergration/sample.json',
@@ -12,8 +16,9 @@ curl_setopt_array($ch, array(
         'account_bank' => '044'
     ]),
     CURLOPT_HTTPHEADER =>   array(
+        'cache-control: no-cache',
         "Content-Type: application/json",
-        "Authorization : Bearer FLWSECK_TEST-cf744a18ea5f5c0faabb5ad92eca6217-X",
+        "Authorization: Bearer FLWSECK_TEST-cf744a18ea5f5c0faabb5ad92eca6217-X",
     )
     
     

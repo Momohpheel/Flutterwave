@@ -13,8 +13,8 @@ curl_setopt_array($ch, array(
     ]),
     CURLOPT_HTTPHEADER => array(
         'cache-control: no-cache',
-        'Content-Type : application/json',
-        'Authorization : Bearer sk_test_f2a6d1d7f41d7d5e23c4221cf683a56b03ea3a81',
+        'Content-Type: application/json',
+        'Authorization: Bearer sk_test_f2a6d1d7f41d7d5e23c4221cf683a56b03ea3a81',
     ),
 ));
 

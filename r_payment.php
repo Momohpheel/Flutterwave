@@ -25,8 +25,8 @@ curl_setopt_array($ch, array(
      ]
     ]),
     CURLOPT_HTTPHEADER => array(
-        'Content-Type : application/json',
-        'Authorization : Bearer FLWSECK_TEST-cf744a18ea5f5c0faabb5ad92eca6217-X',
+        'Content-Type: application/json',
+        'Authorization: Bearer FLWSECK_TEST-cf744a18ea5f5c0faabb5ad92eca6217-X',
     ),
 ));
 
