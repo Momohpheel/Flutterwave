@@ -12,7 +12,7 @@ curl_setopt_array($ch, array(
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_CUSTOMREQUEST => 'POST',
     CURLOPT_POSTFIELDS => json_encode([
-        'account_number' => '0787860837',
+        'account_number' => '0690000032',//'0787860837',
         'account_bank' => '044'
     ]),
     CURLOPT_HTTPHEADER =>   array(
@@ -20,7 +20,6 @@ curl_setopt_array($ch, array(
         "Content-Type: application/json",
         "Authorization: Bearer FLWSECK_TEST-cf744a18ea5f5c0faabb5ad92eca6217-X",
     )
-    
     
 ));
 // curl_setopt($ch, CURLOPT_URL,  $url);
