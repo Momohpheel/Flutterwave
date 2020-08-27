@@ -4,10 +4,10 @@ require_once "vendor/autoload.php";
 use GuzzleHttp\Client;
 
 $client = new Client([
-    'base_uri' => 'https://api.flutterwave.com/v3',
+    'base_uri' => 'https://api.flutterwave.com',
 ]);
 
-$response = $client->request('POST', '/payments', [
+$response = $client->request('POST', '/v3/payments', [
     "header" => [
         "Authorization" => "Bearer FLWSECK_TEST-cf744a18ea5f5c0faabb5ad92eca6217-X",
         "Content-Type" => "application/json",
@@ -36,8 +36,8 @@ $response = $client->request('POST', '/payments', [
 
 $body = $response->getBody();
 $trans = json_decode($body);
-//echo $body;
-header('Location :'. $trans['data']['link']);
+echo $body;
+//header('Location :'. $trans['data']['link']);
 
 
 // //sk_test_f2a6d1d7f41d7d5e23c4221cf683a56b03ea3a81

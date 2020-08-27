@@ -25,9 +25,9 @@ $response = $client->request('POST', '/transaction/initialize', [
 
 $body = $response->getBody();
 $trans = json_decode($body);
- //header('Location :'. $trans->data->authorization_url);
+header('Location :'. $trans->data->authorization_url);
 
-echo $body;
+//echo $body;
 /**
  * for some reason cUrl doesnt work for consuming this api 
  * 
