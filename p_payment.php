@@ -19,14 +19,15 @@ $response = $client->request('POST', '/transaction/initialize', [
                 [
                     'amount'=> '3000',
                     'email'=> 'momohmayowa14@gmail.com',
-                    'callback_url' => 'p_callback.php'
+                    'callback_url' => 'https://rave-pay.herokuapp.com/p_callback.php'
                 ]
 ]);
 
 $body = $response->getBody();
 $trans = json_decode($body);
-header('Location :'. $trans->data->authorization_url);
+ //header('Location :'. $trans->data->authorization_url);
 
+echo $body;
 /**
  * for some reason cUrl doesnt work for consuming this api 
  * 
