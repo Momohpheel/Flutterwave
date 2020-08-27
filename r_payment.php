@@ -36,8 +36,8 @@ $response = $client->request('POST', '/v3/payments', [
 
 $body = $response->getBody();
 $trans = json_decode($body);
-echo $body;
-//header('Location :'. $trans['data']['link']);
+//echo $body;
+header('Location: '.$trans->data->link);
 
 
 // //sk_test_f2a6d1d7f41d7d5e23c4221cf683a56b03ea3a81
